@@ -1,0 +1,54 @@
+.mat-mdc-snack-bar-container {
+    background: none;
+    padding: 0 !important;
+    min-height: auto !important;
+    .mat-mdc-snackbar-surface {
+        background-color: transparent !important;
+        padding: 0;
+        .mat-mdc-snack-bar-label {
+            padding: 0;
+            .snackbar-box {
+                padding: 10px 10px 10px 10px;
+                border-radius: 5px;
+                background-color: $snackbarBgColor;
+                display: inline-flex;
+                align-items: flex-start;
+                width: 100%;
+                .mat-icon {
+                    width: 24px;
+                }
+                .snackbar-description-txt {
+                    width: calc(100% - 40px);
+                    padding: 0 10px;
+                }
+                .cancel-icon {
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    cursor: pointer;
+                    span {
+                        @include icon(16px, $menuActiveColor);
+                    }
+                }
+                &.success-snackbar-box {
+                    border-left: solid 5px $successMessage;
+                }
+                &.error-snackbar-box {
+                    border-left: solid 5px $errorMessage;
+                }
+                .snackbar-title-message {
+                    @include headingSize(18px, $menuActiveColor);
+                }
+                .success-snackbar-txt {
+                    color: $successMessage;
+                }
+                .error-snackbar-txt {
+                    color: $errorMessage;
+                }
+                .snackbar-sub-txt {
+                    @include textAllVariable(14px, $menuActiveColor, $suse, $medium);
+                }
+            }
+        }
+    }
+}
